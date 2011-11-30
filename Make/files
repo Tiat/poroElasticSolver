@@ -1,0 +1,4 @@
+fixedTraction/fixedTractionFvPatchVectorField.C
+poroElasticSolver.C
+
+EXE = $(FOAM_USER_APPBIN)/poroElasticSolver
