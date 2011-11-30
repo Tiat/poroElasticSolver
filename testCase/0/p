@@ -1,0 +1,45 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.7.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 -1 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    seaBed
+    {
+   	type			analyticFixedValue;
+	amplitude       1;
+	frequency       1;
+    waveVector      (2 2 0);
+    unitField       uniform 1;
+    }
+    soilStructureInterface
+    {
+        type            zeroGradient;
+    }
+    soilDomainSides
+    {
+        type            zeroGradient;
+    }
+    soilDomainBottom
+    {
+        type            zeroGradient;
+    }
+}
+
+// ************************************************************************* //
