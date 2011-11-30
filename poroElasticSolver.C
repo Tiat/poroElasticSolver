@@ -32,6 +32,9 @@ Description
     Simple linear elasticity structural analysis code.
     Solves for the displacement vector field D and the pore water pressure p. 
     Also generating the stress tensor field sigma.
+	
+Author
+	Johan Roenby, DHI Water & Environment
 
 \*---------------------------------------------------------------------------*/
 
